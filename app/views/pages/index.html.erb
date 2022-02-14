@@ -1,0 +1,10 @@
+<div data-controller="message">
+  <textarea readonly data-message-target="messages" rows="20"></textarea>
+  <br>
+  <input
+    type="text"
+    placeholder="Press enter to send text"
+    data-action="keyup->message#onSend"
+    data-message-target="input"
+  />
+</div>

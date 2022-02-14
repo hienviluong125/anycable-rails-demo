@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h2>Other client here</h2>
+	<script>
+		function openWs() {
+			return new WebSocket("ws://localhost:3334/cable")
+		}
+
+		const chatWs = openWs()
+		chatWs.onopen = function(ev) {
+			// const msg = {
+			// 	command: 'subscribe',
+			// 	identifier: JSON.stringify({
+			// 		channel: 'WelcomeChannel'
+			// 	})
+			// };
+
+			// chatWs.send(JSON.stringify(msg))
+			console.log('WebSocket Ev: ', ev);
+		}
+
+		chatWs.onerror = function(error) {
+      console.log('WebSocket Error: ' + error);
+    };
+
+	</script>
+</body>
+
+</html>
