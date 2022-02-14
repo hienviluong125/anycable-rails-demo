@@ -1,5 +1,6 @@
-Ruby version: 3.0.2
-Rails version: 6.1.4
+##### Ruby version: 3.0.2
+##### Rails version: 6.1.4
+##### Postgres version: 12.9
 
 ```bash
 #### Prepare rails's server database
